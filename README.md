@@ -11,9 +11,7 @@
 
 **Linkbox** is a single endpoint which accepts a `?url=` parameter and returns best-guess metadata for the target site. A successful request parses HTML of the target page and discerns which data is best suited to provided a preview of said page. The resulting JSON can be used to format embedded HTML previews, thereby creating a better visual experience as well as countless SEO benefits.
 
-<center>
-![Link Preview](img/linkbox.jpg)
-</center>
+![Link Preview](https://github.com/toddbirchard/linkbox/blob/master/img/linkboxgithub.jpg?raw=true)
 
 ## Usage
 
