@@ -15,7 +15,6 @@ setup = (
     tests_require=["pytest"],
     cmdclass={"pytest": PyTest},
     install_requires=[
-        "bs4",
         "flask",
         "requests"
     ]

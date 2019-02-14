@@ -1,5 +1,6 @@
 from flask import make_response, request
-from fetch import get_meta
+# from fetch import get_meta
+from aylien import generate_url_metadata
 import json
 
 
@@ -15,6 +16,7 @@ def scrape(request):
         'Access-Control-Max-Age': '3600',
         'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
     }
-    previews = get_meta(target_url, headers)
-    response_body = json.dumps(previews)
+    # preview = get_meta(target_url, headers)
+    preview = generate_url_metadata(target_url)
+    response_body = json.dumps(preview)
     return make_response(str(response_body), 200, headers)

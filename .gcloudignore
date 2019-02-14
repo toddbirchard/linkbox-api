@@ -13,5 +13,5 @@
 .git
 .gitignore
 
-node_modules
+.env
 local.py

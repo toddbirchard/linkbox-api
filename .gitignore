@@ -4,3 +4,4 @@ local.py
 endpoint
 ghpages
 docs
+.env
