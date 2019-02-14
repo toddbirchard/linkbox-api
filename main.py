@@ -6,8 +6,6 @@ import json
 
 def scrape(request):
     """Scrape scheduled link previews."""
-    # Allows POST requests from any origin with the Content-Type
-    # header and caches preflight response for an 3600s
     target_url = request.args.get('url')
     headers = {
         'Access-Control-Allow-Origin': '*',
