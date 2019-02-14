@@ -18,5 +18,5 @@ def scrape(request):
     }
     # preview = get_meta(target_url, headers)
     preview = generate_url_metadata(target_url)
-    response_body = json.dumps(preview)
-    return make_response(str(response_body), 200, headers)
+    # response_body = json.dumps(preview)
+    return make_response(preview, 200, headers)
