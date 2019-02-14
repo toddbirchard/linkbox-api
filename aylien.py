@@ -13,7 +13,7 @@ def sanitize_data(obj):
     displayurl = displayurl.replace('www.', '')
     obj['displayurl'] = displayurl
     # Reformat date
-    published = dt.strptime(obj['publishDate'], '%m/%d/%Y %p')
+    published = dt.strptime(obj['publishDate'], '%Y-%m-%d %H:%M:%S')
     obj['publishDate'] = published
     # Format tags
     tags = [lambda x: '#' + x.replace(' ', ''), obj['tags']]
