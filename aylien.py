@@ -24,8 +24,8 @@ def sanitize_data(obj):
 def get_aylien_extract(url):
     """Extract url information using aylien API."""
     headers = {
-        'X-AYLIEN-TextAPI-Application-Key': os.environ.get('aylien_app_key'),
-        'X-AYLIEN-TextAPI-Application-ID': os.environ.get('aylien_app_id'),
+        'X-AYLIEN-TextAPI-Application-Key': os.environ.get('AYLIEN_APP_KEY'),
+        'X-AYLIEN-TextAPI-Application-ID': os.environ.get('AYLIEN_APP_ID'),
         'Content-Type': 'application/json'
     }
     params = {
@@ -40,8 +40,8 @@ def get_aylien_extract(url):
 def get_aylien_summary(url):
     """Generate a 3-sentence summary of the URL using Aylien."""
     headers = {
-        'X-AYLIEN-TextAPI-Application-Key': os.environ.get('aylien_app_key'),
-        'X-AYLIEN-TextAPI-Application-ID': os.environ.get('aylien_app_id')
+        'X-AYLIEN-TextAPI-Application-Key': os.environ.get('AYLIEN_APP_KEY'),
+        'X-AYLIEN-TextAPI-Application-ID': os.environ.get('AYLIEN_APP_ID')
     }
     params = {
         'url': url,
