@@ -23,7 +23,7 @@ def get_domain(url):
     return name
 
 
-def get_title(link):
+def get_title(link, url):
     """Attempt to get a title.
 
     1. Check metadata for title tag.
@@ -31,7 +31,7 @@ def get_title(link):
     3. Remove all text which comes after the first pipe ("|") in the title.
     4. Return title.
     """
-    title = None
+    title = url
     if link.title.string is not None:
         title = link.title.string
     elif link.find("h1") is not None:
@@ -50,7 +50,7 @@ def get_description(link):
     2. If doesn't exist, check page for p tag.
     3, Return description.
     """
-    description = None
+    description = ""
     if link.find("meta", property="og:description") is not None:
         description = link.find("meta", property="og:description").get('content')
     elif link.find("p") is not None:
@@ -68,7 +68,7 @@ def get_image(link):
     3. If the image path is relative, make it absolute.
     4. Return image URL.
     """
-    image = None
+    image = ""
     if link.find("meta", property="og:image") is not None:
         image = link.find("meta", property="og:image").get('content')
     elif link.find_all("img", src=True) is not None:
