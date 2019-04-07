@@ -1,12 +1,8 @@
 from flask import make_response, request
-from flask_cors import CORS
 from meta import get_meta
 import json
 
-CORS(flask)
 
-
-@cross_origin()
 def scrape(request):
     """Scrape scheduled link previews.
 
