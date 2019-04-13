@@ -5,3 +5,4 @@ ghpages
 docs
 .env
 aylien.py
+.DS_Store
