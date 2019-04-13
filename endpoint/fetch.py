@@ -1,3 +1,37 @@
+import requests
+from bs4 import BeautifulSoup
+
+
+def get_meta(url):
+    """Generate preview obj per link.
+
+    1. Set headers of outbound GET request.
+    2. Determine title of target url.
+    3. Create description blurb of target url.
+    4. Find suitable image for target url.
+    5. Determine the top-level site name of target url.
+    6. Create dict of fetched metadata.
+    7. Return result.
+    """
+    headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Max-Age': '3600',
+        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    }
+    r = requests.get(url, headers=headers)
+    embedded_link = BeautifulSoup(r.content, 'html.parser')
+    preview_dict = {
+        'title': get_title(embedded_link, url),
+        'description': get_description(embedded_link),
+        'image': get_image(embedded_link),
+        'sitename': get_site_name(embedded_link, url),
+        'url': url
+        }
+    return preview_dict
+
+
 def get_site_name(link, url):
     """Attempt to get the site's base name.
 
