@@ -3,7 +3,7 @@ import json
 import pprint
 from datetime import datetime as dt
 import requests
-from flask import request, make_response, render_template
+from flask import render_template
 
 
 def sanitize_data(obj):
