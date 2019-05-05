@@ -1,5 +1,5 @@
 from flask import make_response, request
-from fetch import get_meta
+from endpoint import fetch
 import json
 
 
@@ -19,6 +19,6 @@ def scrape(request):
         'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
     }
     target_url = request.args.get('url')
-    previews = get_meta(target_url)
+    previews = fetch.get_meta(target_url)
     response_body = json.dumps(previews)
     return make_response(str(response_body), 200, headers)

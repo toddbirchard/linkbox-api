@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 requests = "*"
-beautifulsoup4="*"
-flask="*"
+bs4 = "*"
+flask = "*"
 
 [dev-packages]
-pytest="*"
+pytest = "*"
 
 [requires]
-python_version = "3.7.2"
+python_version = "3.7"
