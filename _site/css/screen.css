@@ -61,7 +61,8 @@ p, address {
 .testimonial {
   background: #f5f5f5;
   margin: 0;
-  padding: 100px 0; }
+  padding: 100px 0;
+  display: none; }
   .testimonial .testimonial-block {
     max-width: 750px;
     width: 98%;
@@ -206,7 +207,7 @@ blockquote:before {
     top: -1000%;
     bottom: -1000%;
     margin: auto;
-    width: 300px; }
+    width: 150px; }
 
 .page {
   margin-bottom: 0;
