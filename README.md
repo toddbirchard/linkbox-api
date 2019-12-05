@@ -9,9 +9,13 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/linkbox-api.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=Github)](https://github.com/toddbirchard/linkbox-api/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/linkbox-api.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/toddbirchard/linkbox-api/network)
 
-**Linkbox** is a single endpoint which accepts a `?url=` parameter and returns best-guess metadata for the target site. A successfully executed request will parse the HTML of the target page and derive a link preview. The resulting JSON can be used to format embedded HTML previews, thereby creating a better visual experience as well as countless SEO benefits.
-
 ![Link Preview](https://raw.githubusercontent.com/toddbirchard/linkbox-api/master/img/linkboxdemo.gif)
+
+**Linkbox** is an API which generates beautiful embedded link previews for any given URL.
+
+## Usage
+
+Linkbox is a single GET endpoint which accepts a `?url=` parameter and returns best-guess metadata for the target site. A preview can be found on the Linkbox API website.
 
 
 ## Features in Development
