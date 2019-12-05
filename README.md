@@ -11,13 +11,8 @@
 
 **Linkbox** is a single endpoint which accepts a `?url=` parameter and returns best-guess metadata for the target site. A successfully executed request will parse the HTML of the target page and derive a link preview. The resulting JSON can be used to format embedded HTML previews, thereby creating a better visual experience as well as countless SEO benefits.
 
-![Link Preview](https://raw.githubusercontent.com/toddbirchard/linkbox-api/master/img/linkboxgithub.jpg)
-
-## Usage
-
-Linkbox accepts a `url` parameter where the value is expected to be a URL from which to generate a site preview. Here's a quick look at linkbox in action:
-
 ![Link Preview](https://raw.githubusercontent.com/toddbirchard/linkbox-api/master/img/linkboxdemo.gif)
+
 
 ## Features in Development
 
@@ -28,3 +23,7 @@ There are several major features which remain in development:
 * **Customized Responses**: Some content providers (such as Medium) are intentionally resistant to scrapers. Exceptions for such sources will be handled on a case-by-case basis to ensure meaningful data is returned.
 * **Content Awareness**: Depending on the content of the link, a different embed will be returned to best display said content.
 * **Direct Database Writes**: Integration with a site's content database to ensure HTML is hard-embedded to the page as opposed to a client-side script.
+
+-----
+
+This project and all publically-visible repositories are free of charge. If you've found this project to be helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards improving these projects.
